@@ -1,0 +1,15 @@
+mvi b,02h
+mvi c,80h
+
+mvi d,01h
+mvi e,81h
+
+mov a,c
+adc e
+mov l,a
+mov a,b
+
+adc d
+mov h,a
+
+hlt

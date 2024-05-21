@@ -1,0 +1,8 @@
+mvi b, 02h  ; Load the first number (minuend) into register B
+mov a, b    ; Move the first number to accumulator A
+mvi c, 05h  ; Load the second number (subtrahend) into register C
+cma         ; Take the one's complement of accumulator A (complement A)
+inr a       ; Increment the one's complement to get two's complement (A = -A)
+add c       ; Add the two's complement of the second number
+mov d, a    ; Move the result to register D (the difference)
+hlt         ; Halt the program

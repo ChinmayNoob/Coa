@@ -1,0 +1,16 @@
+mvi b,02h
+mvi c,05h
+
+mov a,b
+cma
+mov d,a
+
+mov a,c
+cma
+mov e,a
+
+ana d
+cma 
+mov h,a
+
+hlt

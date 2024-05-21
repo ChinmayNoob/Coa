@@ -1,0 +1,5 @@
+mvi b,07h
+mov a,b
+mvi c,04h
+sub c
+hlt
