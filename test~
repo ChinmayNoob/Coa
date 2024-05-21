@@ -1,7 +1,7 @@
-lxi h,2000h  ; Load source memory address (2000h) into HL pair (highest byte first)
-lxi d,4004h  ; Load destination memory address (4004h - one byte ahead) into DE pair (highest byte first)
+lxi h, 2000h  ; Load source memory address (2000h) into HL pair (highest byte first)
+lxi d, 4004h  ; Load destination memory address (4004h - one byte ahead) into DE pair (highest byte first)
 
-mvi c,05h   ; Set loop counter (number of bytes to copy)
+mvi c, 05h   ; Set loop counter (number of bytes to copy)
 
 loop:mov a, m     ; Move data from source memory to A
   stax d      ; Store data from A to destination memory (highest byte first)
