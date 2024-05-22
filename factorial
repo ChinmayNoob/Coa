@@ -1,0 +1,12 @@
+mvi b,05        ; Put the value of 5 in the b regsiter
+mov c,b         ; Copy b into c
+dcr b           ; Decrement the b register
+l1: mov d,b     ; Create the l1 section and move b into d
+mvi a,00        ; Put 0 in the accumulator
+l2: add c       ; Create the l2 section and move add c to the accumulator
+dcr d           ; Decrease d
+jnz l2          ; Jump back to l2
+mov c,a         ; Move a into c
+dcr b           ; Decrease b by 1
+jnz l1          ; Jump to l1
+hlt             ; Stop the program

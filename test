@@ -1,13 +1,6 @@
-lxi h,2000h
-lxi d,4004h
-
-mvi c,05h
-
-loop:	mov a,m
-	stax d
-	inx h
-	dcx d
-	dcr c
-	jnz loop
- 
+mvi b,03h
+mvi c,04h
+loop: add b
+dcr c
+jnz loop
 hlt
