@@ -1,12 +1,13 @@
-lxi h, 2000h  ; Load source memory address (2000h) into HL pair (highest byte first)
-lxi d, 4004h  ; Load destination memory address (4004h - one byte ahead) into DE pair (highest byte first)
+lxi h,2000h
+lxi d,4004h
 
-mvi c, 05h   ; Set loop counter (number of bytes to copy)
+mvi c,05h
 
-loop:mov a, m     ; Move data from source memory to A
-  stax d      ; Store data from A to destination memory (highest byte first)
-  dcr h       ; Decrement source memory address (HL) - move to lower byte
-  dcx d       ; Decrement destination memory address (DE) - move to lower byte
-  dcr c       ; Decrement loop counter
-  jnz loop     ; Jump to "loop" if counter is not zero
-hlt          ; Halt program
+loop:	mov a,m
+	stax d
+	inx h
+	dcx d
+	dcr c
+	jnz loop
+ 
+hlt
